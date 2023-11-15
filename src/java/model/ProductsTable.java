@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
  */
 public class ProductsTable {
     public static List<Products> findAllProducts() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartOnlinePU");
         EntityManager em = emf.createEntityManager();
         List<Products> empList = null;
         try {
@@ -32,7 +32,7 @@ public class ProductsTable {
     }
     
     public static Products findProductById(int id) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartOnlinePU");
         EntityManager em = emf.createEntityManager();
         Products emp = null;
         try {
