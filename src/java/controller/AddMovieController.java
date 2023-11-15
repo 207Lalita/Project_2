@@ -43,8 +43,6 @@ public class AddMovieController extends HttpServlet {
             String checkboxName = "selectedProducts";
             String quantityParam = "quantity" + product.getId();
 
-            // Check if the checkbox is checked
-            // Check if the checkbox is checked
 String[] selectedProducts = request.getParameterValues(checkboxName);
 boolean isChecked = false;
 
@@ -57,13 +55,13 @@ if (selectedProducts != null) {
     }
 }
 
-// If checked, add the product to the shopping cart
+
 if (isChecked) {
-    // Check if quantityParam is not null
+
     if (quantityParam != null) {
         String quantityParamValue = request.getParameter(quantityParam);
 
-        // Check if quantityParamValue is not null and has a valid format
+       
         if (quantityParamValue != null && quantityParamValue.matches("\\d{1,}")) {
             int quantity = Integer.parseInt(quantityParamValue);
             shoppingcart.addProduct(product, quantity);
@@ -71,7 +69,7 @@ if (isChecked) {
 }
 
 
-        // Redirect back to the ShoppingCart.jsp page
+       
         response.sendRedirect("DVDCartList.jsp");
     }
         }
