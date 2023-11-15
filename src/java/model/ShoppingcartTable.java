@@ -48,7 +48,7 @@ public class ShoppingcartTable {
     }
 
     public static int insertShoppingcart(Shoppingcart cart) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartOnlinePU");
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = null;
         try {
@@ -71,7 +71,7 @@ public class ShoppingcartTable {
     }
 
     public static List<Shoppingcart> findAllShopppingcart() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("OnlineShoppingWebAppPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartOnlinePU");
         EntityManager em = emf.createEntityManager();
         List<Shoppingcart> movCartList = null;
         try {
