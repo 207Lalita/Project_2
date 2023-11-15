@@ -61,8 +61,8 @@
                 </tr>
             </table>
             
-            <a href="index_1.html"><input type="button" value="Back to homepage"></a>
-            <a href="ShoppingCart.jsp"><input type="submit" value="Add to Cart"></a>
+            <a href="index.html"><input type="button" value="Back to homepage"></a>
+            <a href="DVDgCartList.jsp"><input type="submit" value="Add to Cart"></a>
         </center>
     </form>
 </body>
