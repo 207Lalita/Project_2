@@ -21,17 +21,17 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 public class ShoppingcartTable {
-    // Simulate a database table for the shopping cart
+    
     private static Map<Integer, Shoppingcart> cart = new HashMap<>();
     private static int cartIdCounter = 1;
 
     public static int addToCart(int productId, int quantity) {
         if (cart.containsKey(productId)) {
-            // Product already in the cart, update quantity
+            
             Shoppingcart item = cart.get(productId);
             item.setQuantity(item.getQuantity() + quantity);
         } else {
-            // Product not in the cart, add a new entry
+            
             Shoppingcart newItem = new Shoppingcart(cartIdCounter, productId, quantity);
             cart.put(productId, newItem);
             cartIdCounter++;
