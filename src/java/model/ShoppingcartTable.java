@@ -75,7 +75,7 @@ public class ShoppingcartTable {
         EntityManager em = emf.createEntityManager();
         List<Shoppingcart> movCartList = null;
         try {
-            movCartList = (List<Shoppingcart>) em.createNamedQuery("Shoppingcart.findAll").getResultList();         
+            movCartList = (List<Shoppingcart>) em.createNamedQuery("ShoppingCartOnline.findAll").getResultList();         
         } catch (Exception e) {
             throw new RuntimeException(e);
             
@@ -88,11 +88,11 @@ public class ShoppingcartTable {
     }
 
     public static List<Shoppingcart> findListShoppingcartById(ShoppingcartPK id) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ShoppingCartOnlinePU");
         EntityManager em = emf.createEntityManager();
         List<Shoppingcart> cartList = null;
         try {
-            TypedQuery<Shoppingcart> query = em.createNamedQuery("Shoppingcart.findByCartId", Shoppingcart.class);
+            TypedQuery<Shoppingcart> query = em.createNamedQuery("ShoppingCartOnline.findByCartId", ShoppingCartOnline.class);
             query.setParameter("cartId", id.getCartId()); 
             cartList = query.getResultList();
         } catch (Exception e) {
