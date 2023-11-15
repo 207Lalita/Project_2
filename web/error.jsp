@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1><%= request.getAttribute("errMsg")%></h1>
-        <a href="index_1.html">Back to Menu</a>
+        <a href="index.html">Back to Menu</a>
     </body>
 </html>
